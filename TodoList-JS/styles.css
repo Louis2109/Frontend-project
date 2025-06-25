@@ -1,0 +1,222 @@
+:root {
+    --bg: #f0f2f5;
+    --container-bg: #fff;
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --text: #333;
+    --input-bg: #fff;
+    --input-border: #ddd;
+    --filter-btn: #888;
+    --filter-active-bg: #e0e7ef;
+    --filter-active-text: #3b82f6;
+    --todo-completed: #aaa;
+    --todo-border: #f0f0f0;
+    --checkbox: #3b82f6;
+    --delete: #e11d48;
+    --delete-hover-bg: #fee2e2;
+    --empty: #888;
+}
+
+body[data-theme='dark'] {
+    --bg: #18181b;
+    --container-bg: #23272f;
+    --primary: #60a5fa;
+    --primary-dark: #2563eb;
+    --text: #f1f5f9;
+    --input-bg: #2d3240;
+    --input-border: #444;
+    --filter-btn: #aaa;
+    --filter-active-bg: #303545;
+    --filter-active-text: #60a5fa;
+    --todo-completed: #666;
+    --todo-border: #25262d;
+    --checkbox: #60a5fa;
+    --delete: #f87171;
+    --delete-hover-bg: #2d2d32;
+    --empty: #666;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    transition: background 0.3s;
+}
+
+.container {
+    background: var(--container-bg);
+    margin-top: 40px;
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+    transition: background 0.3s;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: var(--primary);
+    transition: color 0.2s;
+    margin-left: 1rem;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    outline: none;
+}
+
+#theme-toggle:hover {
+    color: var(--primary-dark);
+    background: var(--filter-active-bg);
+}
+
+#todo-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: var(--input-bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+#todo-form button {
+    padding: 0 1.25rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#todo-form button:hover {
+    background: var(--primary-dark);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filters button {
+    background: none;
+    border: none;
+    color: var(--filter-btn);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.filters .active,
+.filters button:hover {
+    background: var(--filter-active-bg);
+    color: var(--filter-active-text);
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--todo-border);
+    transition: background 0.2s;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: var(--todo-completed);
+}
+
+.todo-checkbox {
+    margin-right: 1rem;
+    accent-color: var(--checkbox);
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text);
+    word-break: break-word;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--delete);
+    font-size: 1.35rem;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.delete-btn:hover {
+    background: var(--delete-hover-bg);
+    color: var(--delete);
+}
+
+.delete-btn svg {
+    width: 1.25em;
+    height: 1.25em;
+    display: block;
+    pointer-events: none;
+}
+
+#empty-state {
+    text-align: center;
+    color: var(--empty);
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none;
+}
