@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase - Modern E-commerce</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">ShopEase</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div>
+                    <h1>Discover the Latest in Tech</h1>
+                    <p>Upgrade your lifestyle with our exclusive gadgets and unbeatable prices.</p>
+                    <a href="#products" class="btn-primary">Shop Now</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80"
+                    alt="Featured Product" class="hero-img" />
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🚚</span>
+                    <h3>Free Shipping</h3>
+                    <p>On all orders above $50</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure payment</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💬</span>
+                    <h3>24/7 Support</h3>
+                    <p>We’re here to help, anytime</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>Popular Products</h2>
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be rendered here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-container">
+                <div class="contact-details">
+                    <h2>Contact Us</h2>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Olezoa, Yaounde, Cameroun</p>
+                        <p><i class="fas fa-phone"></i> +237 654 58 28 47</p>
+                        <p><i class="fas fa-envelope"></i> nkenfacklandoloic@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h3>Get In Touch</h3>
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                        <div id="contact-success" class="hidden">Thank you for reaching out! We'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 LouisShope. All rights reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
